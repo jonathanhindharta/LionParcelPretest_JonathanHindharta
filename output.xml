@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20240817 21:22:44.990" rpa="false" schemaversion="3">
+<suite id="s1" name="UISauceDemoBuyBackPack" source="D:\Project\LionParcelPretest_JonathanHindharta\test\UISauceDemoBuyBackPack.robot">
+<test id="s1-t1" name="Scenario : Login to Sauce Demo Web With Valid UserName And Password" line="15">
+<kw name="Given LoginPage.User Open Sauce Demo Web" library="LoginPage">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240817 21:22:45.171" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240817 21:22:45.171" endtime="20240817 21:22:46.232"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${sauce_demo_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240817 21:22:46.232" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20240817 21:22:46.232" endtime="20240817 21:22:46.845"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240817 21:22:46.845" endtime="20240817 21:22:46.876"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:45.171" endtime="20240817 21:22:46.876"/>
+</kw>
+<kw name="Then LoginPage.Login Page Element Should Be Loaded" library="LoginPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${login_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:46.896" level="INFO">Element 'class=login_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:46.877" endtime="20240817 21:22:46.896"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${user_name_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:46.911" level="INFO">Element 'id=user-name' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:46.896" endtime="20240817 21:22:46.912"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${password_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:46.928" level="INFO">Element 'id=password' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:46.912" endtime="20240817 21:22:46.928"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${login-button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:46.943" level="INFO">Element 'id=login-button' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:46.929" endtime="20240817 21:22:46.943"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:46.877" endtime="20240817 21:22:46.943"/>
+</kw>
+<kw name="When LoginPage.Fill The Login Form and Click Login" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${user_name_xpath_id}</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:46.944" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20240817 21:22:46.944" endtime="20240817 21:22:47.018"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:${password_xpath_id}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:47.019" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20240817 21:22:47.039" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240817 21:22:47.074" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240817 21:22:47.018" endtime="20240817 21:22:47.074"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login-button_xpath_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:47.074" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20240817 21:22:47.074" endtime="20240817 21:22:47.142"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:22:49.144" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:47.142" endtime="20240817 21:22:49.144"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:46.943" endtime="20240817 21:22:49.144"/>
+</kw>
+<kw name="Then HomePage.User Should Redirect To Home Page" library="HomePage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.159" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.145" endtime="20240817 21:22:49.159"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.170" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.159" endtime="20240817 21:22:49.170"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.181" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.171" endtime="20240817 21:22:49.181"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${product_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.193" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.181" endtime="20240817 21:22:49.193"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${product_sort_container_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.204" level="INFO">Element 'xpath=//select[@data-test='product-sort-container']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.193" endtime="20240817 21:22:49.204"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${inventory_container_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.215" level="INFO">Element 'id=inventory_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.204" endtime="20240817 21:22:49.215"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:49.145" endtime="20240817 21:22:49.216"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:45.171" endtime="20240817 21:22:49.216"/>
+</test>
+<test id="s1-t2" name="Scenario : User Click Item Sauce Labs Backpack" line="21">
+<kw name="When HomePage.User Click Item" library="HomePage">
+<arg>${item_name_backpack}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${backpack_a_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:49.229" level="INFO">Element '//div[text()='Sauce Labs Backpack']/ancestor::a' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:49.217" endtime="20240817 21:22:49.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${backpack_a_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:49.229" level="INFO">Clicking element '//div[text()='Sauce Labs Backpack']/ancestor::a'.</msg>
+<status status="PASS" starttime="20240817 21:22:49.229" endtime="20240817 21:22:49.263"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:22:51.270" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:49.263" endtime="20240817 21:22:51.270"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:49.217" endtime="20240817 21:22:51.270"/>
+</kw>
+<kw name="Then InventoryItemPage.User Should Redirect To Inventory Item Page of" library="InventoryItemPage">
+<arg>${item_name_backpack}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.282" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.271" endtime="20240817 21:22:51.282"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.291" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.282" endtime="20240817 21:22:51.291"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.300" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.291" endtime="20240817 21:22:51.300"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${add_to_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.312" level="INFO">Element 'id=add-to-cart' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.300" endtime="20240817 21:22:51.312"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_name_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.323" level="INFO">Element 'xpath=//div[@data-test="inventory-item-name"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.312" endtime="20240817 21:22:51.323"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.334" level="INFO">Element 'xpath=//div[@data-test="inventory-item-desc"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.323" endtime="20240817 21:22:51.334"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.345" level="INFO">Element 'xpath=//div[@data-test="inventory-item-price"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.334" endtime="20240817 21:22:51.345"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${item_img_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.355" level="INFO">Element 'class=inventory_details_img' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.345" endtime="20240817 21:22:51.356"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${back_to_product_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.366" level="INFO">Element 'id=back-to-products' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.356" endtime="20240817 21:22:51.366"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_text}</var>
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:51.378" level="INFO">${price_text} = $29.99</msg>
+<status status="PASS" starttime="20240817 21:22:51.366" endtime="20240817 21:22:51.378"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_desc_text}</var>
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:51.387" level="INFO">${item_desc_text} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<status status="PASS" starttime="20240817 21:22:51.378" endtime="20240817 21:22:51.387"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_price_text}</arg>
+<arg>${price_text}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240817 21:22:51.388" level="INFO">${global_price_text} = $29.99</msg>
+<status status="PASS" starttime="20240817 21:22:51.387" endtime="20240817 21:22:51.388"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_item_name}</arg>
+<arg>${item_name_backpack}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240817 21:22:51.389" level="INFO">${global_item_name} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20240817 21:22:51.388" endtime="20240817 21:22:51.389"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_item_desc}</arg>
+<arg>${item_desc_text}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240817 21:22:51.390" level="INFO">${global_item_desc} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<status status="PASS" starttime="20240817 21:22:51.389" endtime="20240817 21:22:51.390"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=${item_name_xpath}</arg>
+<arg>${item_name_backpack}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240817 21:22:51.398" level="INFO">Element 'xpath=//div[@data-test="inventory-item-name"]' contains text 'Sauce Labs Backpack'.</msg>
+<status status="PASS" starttime="20240817 21:22:51.390" endtime="20240817 21:22:51.398"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:51.271" endtime="20240817 21:22:51.399"/>
+</kw>
+<kw name="When InventoryItemPage.User Click Add To Cart" library="InventoryItemPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=${add_to_cart_xpath_id}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:51.399" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<status status="PASS" starttime="20240817 21:22:51.399" endtime="20240817 21:22:51.422"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:51.399" endtime="20240817 21:22:51.422"/>
+</kw>
+<kw name="Then InventoryItemPage.Shopping Cart Badge Should Be Appear" library="InventoryItemPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${remove_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.436" level="INFO">Element 'id=remove' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.423" endtime="20240817 21:22:51.436"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:51.447" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:51.436" endtime="20240817 21:22:51.448"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${shopping_cart_badge_text}</var>
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:51.457" level="INFO">${shopping_cart_badge_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:51.448" endtime="20240817 21:22:51.457"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${shopping_cart_badge_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:51.457" endtime="20240817 21:22:51.457"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:51.423" endtime="20240817 21:22:51.457"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:49.217" endtime="20240817 21:22:51.457"/>
+</test>
+<test id="s1-t3" name="Scenario : User Open Cart Page And Proceed Until Payment" line="27">
+<kw name="When InventoryItemPage.User Click Shopping Cart" library="InventoryItemPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:51.459" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<status status="PASS" starttime="20240817 21:22:51.459" endtime="20240817 21:22:51.484"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:22:53.494" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:51.484" endtime="20240817 21:22:53.494"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:51.458" endtime="20240817 21:22:53.494"/>
+</kw>
+<kw name="Then CartPage.User Should Redirect To Cart Page" library="CartPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.505" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.495" endtime="20240817 21:22:53.505"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.514" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.505" endtime="20240817 21:22:53.514"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.523" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.514" endtime="20240817 21:22:53.523"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.532" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.523" endtime="20240817 21:22:53.533"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_name_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.541" level="INFO">Element 'xpath=//div[@data-test="inventory-item-name"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.533" endtime="20240817 21:22:53.541"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.550" level="INFO">Element 'xpath=//div[@data-test="inventory-item-desc"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.541" endtime="20240817 21:22:53.550"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.559" level="INFO">Element 'xpath=//div[@data-test="inventory-item-price"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.550" endtime="20240817 21:22:53.559"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_qty_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.574" level="INFO">Element 'xpath=//div[@data-test="item-quantity"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.559" endtime="20240817 21:22:53.574"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${continue_shopping_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.585" level="INFO">Element 'id=continue-shopping' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.574" endtime="20240817 21:22:53.585"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_text}</var>
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.594" level="INFO">${price_text} = $29.99</msg>
+<status status="PASS" starttime="20240817 21:22:53.586" endtime="20240817 21:22:53.594"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_name_text}</var>
+<arg>xpath=${item_name_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.602" level="INFO">${item_name_text} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20240817 21:22:53.594" endtime="20240817 21:22:53.602"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_desc_text}</var>
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.610" level="INFO">${item_desc_text} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<status status="PASS" starttime="20240817 21:22:53.602" endtime="20240817 21:22:53.610"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_qty_text}</var>
+<arg>xpath=${item_qty_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.618" level="INFO">${item_qty_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:53.610" endtime="20240817 21:22:53.618"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${page_title_text}</var>
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.626" level="INFO">${page_title_text} = Your Cart</msg>
+<status status="PASS" starttime="20240817 21:22:53.618" endtime="20240817 21:22:53.626"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_desc_text}</arg>
+<arg>${global_item_desc}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.626" endtime="20240817 21:22:53.626"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${price_text}</arg>
+<arg>${global_price_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.626" endtime="20240817 21:22:53.628"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_name_text}</arg>
+<arg>${global_item_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.628" endtime="20240817 21:22:53.628"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${page_title_text}</arg>
+<arg>${page_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.628" endtime="20240817 21:22:53.628"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${remove_item_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.639" level="INFO">Element 'id=remove-sauce-labs-backpack' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.628" endtime="20240817 21:22:53.639"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.648" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.639" endtime="20240817 21:22:53.648"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${checkout_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:53.659" level="INFO">Element 'id=checkout' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:53.648" endtime="20240817 21:22:53.659"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${shopping_cart_badge_text}</var>
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.667" level="INFO">${shopping_cart_badge_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:53.659" endtime="20240817 21:22:53.667"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${shopping_cart_badge_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.667" endtime="20240817 21:22:53.667"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_qty_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:53.667" endtime="20240817 21:22:53.667"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:53.495" endtime="20240817 21:22:53.667"/>
+</kw>
+<kw name="When CartPage.User Click Checkout Button" library="CartPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=${checkout_button_xpath_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:53.668" level="INFO">Clicking button 'id=checkout'.</msg>
+<status status="PASS" starttime="20240817 21:22:53.668" endtime="20240817 21:22:53.702"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:22:56.703" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:53.702" endtime="20240817 21:22:56.703"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:53.668" endtime="20240817 21:22:56.703"/>
+</kw>
+<kw name="Then CheckOutInfoPage.User Should Redirect To Check Out Information Page" library="CheckOutInfoPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.713" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.703" endtime="20240817 21:22:56.713"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.722" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.713" endtime="20240817 21:22:56.722"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.731" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.722" endtime="20240817 21:22:56.731"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.739" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.731" endtime="20240817 21:22:56.740"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.748" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.740" endtime="20240817 21:22:56.748"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${shopping_cart_badge_text}</var>
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.758" level="INFO">${shopping_cart_badge_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:56.748" endtime="20240817 21:22:56.758"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${shopping_cart_badge_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:56.758" endtime="20240817 21:22:56.758"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${first_name_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.769" level="INFO">Element 'id=first-name' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.758" endtime="20240817 21:22:56.769"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${last_name_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.780" level="INFO">Element 'id=last-name' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.769" endtime="20240817 21:22:56.780"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${postal_code_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.790" level="INFO">Element 'id=postal-code' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.780" endtime="20240817 21:22:56.790"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${cancel_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.801" level="INFO">Element 'id=cancel' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.790" endtime="20240817 21:22:56.801"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${continue_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:56.813" level="INFO">Element 'id=continue' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:56.801" endtime="20240817 21:22:56.813"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${page_title_text}</var>
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.822" level="INFO">${page_title_text} = Checkout: Your Information</msg>
+<status status="PASS" starttime="20240817 21:22:56.813" endtime="20240817 21:22:56.822"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${page_title_text}</arg>
+<arg>${check_out_info_page_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:56.822" endtime="20240817 21:22:56.822"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:56.703" endtime="20240817 21:22:56.822"/>
+</kw>
+<kw name="When CheckOutInfoPage.User Fill Information Form And Click Continue" library="CheckOutInfoPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${first_name_xpath_id}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.823" level="INFO">Typing text 'Jonathan' into text field 'id:first-name'.</msg>
+<status status="PASS" starttime="20240817 21:22:56.823" endtime="20240817 21:22:56.873"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${last_name_xpath_id}</arg>
+<arg>${last_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.874" level="INFO">Typing text 'Hindharta' into text field 'id:last-name'.</msg>
+<status status="PASS" starttime="20240817 21:22:56.874" endtime="20240817 21:22:56.925"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${postal_code_xpath_id}</arg>
+<arg>${postal_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.925" level="INFO">Typing text '10160' into text field 'id:postal-code'.</msg>
+<status status="PASS" starttime="20240817 21:22:56.925" endtime="20240817 21:22:56.971"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${continue_button_xpath_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:56.971" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20240817 21:22:56.971" endtime="20240817 21:22:57.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:22:59.021" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:57.011" endtime="20240817 21:22:59.021"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:56.823" endtime="20240817 21:22:59.021"/>
+</kw>
+<kw name="Then CheckOutOverviewPage.User Should Redirect To Check Out Overview Page" library="CheckOutOverviewPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.032" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.022" endtime="20240817 21:22:59.032"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.042" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.032" endtime="20240817 21:22:59.042"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.051" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.042" endtime="20240817 21:22:59.051"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.060" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.051" endtime="20240817 21:22:59.060"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.070" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.060" endtime="20240817 21:22:59.070"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${shopping_cart_badge_text}</var>
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.079" level="INFO">${shopping_cart_badge_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:59.070" endtime="20240817 21:22:59.079"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${shopping_cart_badge_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.079" endtime="20240817 21:22:59.080"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${page_title_text}</var>
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.088" level="INFO">${page_title_text} = Checkout: Overview</msg>
+<status status="PASS" starttime="20240817 21:22:59.080" endtime="20240817 21:22:59.088"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${page_title_text}</arg>
+<arg>${check_out_ovw_page_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.088" endtime="20240817 21:22:59.088"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_name_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.097" level="INFO">Element 'xpath=//div[@data-test="inventory-item-name"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.089" endtime="20240817 21:22:59.097"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.106" level="INFO">Element 'xpath=//div[@data-test="inventory-item-desc"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.098" endtime="20240817 21:22:59.106"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.115" level="INFO">Element 'xpath=//div[@data-test="inventory-item-price"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.107" endtime="20240817 21:22:59.115"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${item_qty_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.124" level="INFO">Element 'xpath=//div[@data-test="item-quantity"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.115" endtime="20240817 21:22:59.124"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_name_text}</var>
+<arg>xpath=${item_name_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.133" level="INFO">${item_name_text} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20240817 21:22:59.125" endtime="20240817 21:22:59.133"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_desc_text}</var>
+<arg>xpath=${item_desc_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.141" level="INFO">${item_desc_text} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<status status="PASS" starttime="20240817 21:22:59.133" endtime="20240817 21:22:59.141"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_qty_text}</var>
+<arg>xpath=${item_qty_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.150" level="INFO">${item_qty_text} = 1</msg>
+<status status="PASS" starttime="20240817 21:22:59.141" endtime="20240817 21:22:59.150"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${page_title_text}</var>
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.158" level="INFO">${page_title_text} = Checkout: Overview</msg>
+<status status="PASS" starttime="20240817 21:22:59.150" endtime="20240817 21:22:59.158"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_text}</var>
+<arg>xpath=${item_price_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.167" level="INFO">${price_text} = $29.99</msg>
+<status status="PASS" starttime="20240817 21:22:59.158" endtime="20240817 21:22:59.167"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_desc_text}</arg>
+<arg>${global_item_desc}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.167" endtime="20240817 21:22:59.168"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${price_text}</arg>
+<arg>${global_price_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.168" endtime="20240817 21:22:59.168"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_name_text}</arg>
+<arg>${global_item_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.168" endtime="20240817 21:22:59.168"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item_qty_text}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.168" endtime="20240817 21:22:59.168"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${payment_info_value_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.179" level="INFO">Element 'xpath=//div[@data-test="payment-info-value"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.168" endtime="20240817 21:22:59.179"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shipping_info_value_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.190" level="INFO">Element 'xpath=//div[@data-test="shipping-info-value"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.179" endtime="20240817 21:22:59.190"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${subtotal_label_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.202" level="INFO">Element 'xpath=//div[@data-test="subtotal-label"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.190" endtime="20240817 21:22:59.202"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${tax_label_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.213" level="INFO">Element 'xpath=//div[@data-test="tax-label"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.202" endtime="20240817 21:22:59.213"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${total_label_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:22:59.225" level="INFO">Element 'xpath=//div[@data-test="total-label"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:22:59.214" endtime="20240817 21:22:59.225"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${payment_info_text}</var>
+<arg>xpath=${payment_info_value_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.233" level="INFO">${payment_info_text} = SauceCard #31337</msg>
+<status status="PASS" starttime="20240817 21:22:59.225" endtime="20240817 21:22:59.233"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${shipping_info_text}</var>
+<arg>xpath=${shipping_info_value_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.241" level="INFO">${shipping_info_text} = Free Pony Express Delivery!</msg>
+<status status="PASS" starttime="20240817 21:22:59.233" endtime="20240817 21:22:59.241"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${subtotal_text}</var>
+<arg>xpath=${subtotal_label_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.249" level="INFO">${subtotal_text} = Item total: $29.99</msg>
+<status status="PASS" starttime="20240817 21:22:59.242" endtime="20240817 21:22:59.249"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${tax_text}</var>
+<arg>xpath=${tax_label_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.258" level="INFO">${tax_text} = Tax: $2.40</msg>
+<status status="PASS" starttime="20240817 21:22:59.249" endtime="20240817 21:22:59.258"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total_text}</var>
+<arg>xpath=${total_label_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.267" level="INFO">${total_text} = Total: $32.39</msg>
+<status status="PASS" starttime="20240817 21:22:59.258" endtime="20240817 21:22:59.267"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${payment_info_text}</arg>
+<arg>${payment_info_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.267" endtime="20240817 21:22:59.269"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${shipping_info_text}</arg>
+<arg>${shipping_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:22:59.269" endtime="20240817 21:22:59.269"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${subtotal_text}</arg>
+<arg>${global_price_text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240817 21:22:59.269" endtime="20240817 21:22:59.269"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${subtotal_no_string}</var>
+<arg>"${subtotal_text}".replace("Item total: $", "")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.271" level="INFO">${subtotal_no_string} = 29.99</msg>
+<status status="PASS" starttime="20240817 21:22:59.269" endtime="20240817 21:22:59.271"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${subtotal_no_string}</var>
+<arg>float("${subtotal_no_string}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.271" level="INFO">${subtotal_no_string} = 29.99</msg>
+<status status="PASS" starttime="20240817 21:22:59.271" endtime="20240817 21:22:59.271"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tax_no_string}</var>
+<arg>"${tax_text}".replace("Tax: $", "")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.272" level="INFO">${tax_no_string} = 2.40</msg>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.272"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tax_no_string}</var>
+<arg>float("${tax_no_string}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.272" level="INFO">${tax_no_string} = 2.4</msg>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.272"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${total_no_string}</var>
+<arg>"${total_text}".replace("Total: $", "")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.272" level="INFO">${total_no_string} = 32.39</msg>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.272"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${total_no_string}</var>
+<arg>float("${total_no_string}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.272" level="INFO">${total_no_string} = 32.39</msg>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.272"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${total_calculate}</var>
+<arg>${subtotal_no_string} + ${tax_no_string}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240817 21:22:59.272" level="INFO">${total_calculate} = 32.39</msg>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.272"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${total_no_string}</arg>
+<arg>${total_calculate}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240817 21:22:59.272" endtime="20240817 21:22:59.273"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:59.021" endtime="20240817 21:22:59.273"/>
+</kw>
+<kw name="When CheckOutOverviewPage.User Click Finish Button" library="CheckOutOverviewPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${finish_button_xpath_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240817 21:22:59.273" level="INFO">Clicking button 'finish'.</msg>
+<status status="PASS" starttime="20240817 21:22:59.273" endtime="20240817 21:22:59.314"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:23:01.324" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:22:59.315" endtime="20240817 21:23:01.324"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:59.273" endtime="20240817 21:23:01.324"/>
+</kw>
+<kw name="Then CheckOutCompletePage.User Should Redirect To Check Out Complete Page" library="CheckOutCompletePage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.336" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.325" endtime="20240817 21:23:01.336"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.345" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.336" endtime="20240817 21:23:01.345"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.354" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.345" endtime="20240817 21:23:01.354"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.363" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.354" endtime="20240817 21:23:01.363"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath=${shopping_cart_badge_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20240817 21:23:01.367" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' did not exist.</msg>
+<status status="PASS" starttime="20240817 21:23:01.363" endtime="20240817 21:23:01.367"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${checklist_image_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.379" level="INFO">Element 'class=pony_express' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.367" endtime="20240817 21:23:01.379"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${complete_header_text_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.389" level="INFO">Element 'xpath=//h2[@data-test="complete-header"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.379" endtime="20240817 21:23:01.389"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${complete_text_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.400" level="INFO">Element 'xpath=//div[@data-test="complete-text"]' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.390" endtime="20240817 21:23:01.400"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${page_title_text}</var>
+<arg>xpath=${page_title_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:23:01.410" level="INFO">${page_title_text} = Checkout: Complete!</msg>
+<status status="PASS" starttime="20240817 21:23:01.401" endtime="20240817 21:23:01.410"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${page_title_text}</arg>
+<arg>${check_out_comp_page_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:23:01.410" endtime="20240817 21:23:01.410"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${complete_header_text}</var>
+<arg>xpath=${complete_header_text_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:23:01.419" level="INFO">${complete_header_text} = Thank you for your order!</msg>
+<status status="PASS" starttime="20240817 21:23:01.411" endtime="20240817 21:23:01.419"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${complete_text}</var>
+<arg>xpath=${complete_text_xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240817 21:23:01.427" level="INFO">${complete_text} = Your order has been dispatched, and will arrive just as fast as the pony can get there!</msg>
+<status status="PASS" starttime="20240817 21:23:01.419" endtime="20240817 21:23:01.427"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${complete_header_text}</arg>
+<arg>${complete_header_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:23:01.427" endtime="20240817 21:23:01.428"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${complete_text}</arg>
+<arg>${complete_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240817 21:23:01.428" endtime="20240817 21:23:01.428"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${back_to_product_button_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:01.437" level="INFO">Element 'id=back-to-products' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:01.428" endtime="20240817 21:23:01.437"/>
+</kw>
+<status status="PASS" starttime="20240817 21:23:01.324" endtime="20240817 21:23:01.437"/>
+</kw>
+<kw name="When CheckOutCompletePage.User Click Back To Product Button" library="CheckOutCompletePage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${back_to_product_button_xpath_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240817 21:23:01.438" level="INFO">Clicking button 'back-to-products'.</msg>
+<status status="PASS" starttime="20240817 21:23:01.438" endtime="20240817 21:23:01.475"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240817 21:23:03.487" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240817 21:23:01.475" endtime="20240817 21:23:03.487"/>
+</kw>
+<status status="PASS" starttime="20240817 21:23:01.438" endtime="20240817 21:23:03.487"/>
+</kw>
+<kw name="Then HomePage.User Should Redirect To Home Page" library="HomePage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=${app_logo_xpath_class}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.498" level="INFO">Element 'class=app_logo' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.488" endtime="20240817 21:23:03.498"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${burger_menu_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.507" level="INFO">Element 'id=react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.498" endtime="20240817 21:23:03.507"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${shopping_cart_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.515" level="INFO">Element 'id=shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.507" endtime="20240817 21:23:03.515"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${product_title_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.524" level="INFO">Element 'xpath=//span[@data-test='title']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.515" endtime="20240817 21:23:03.524"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=${product_sort_container_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.533" level="INFO">Element 'xpath=//select[@data-test='product-sort-container']' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.524" endtime="20240817 21:23:03.533"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=${inventory_container_xpath_id}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240817 21:23:03.543" level="INFO">Element 'id=inventory_container' is displayed.</msg>
+<status status="PASS" starttime="20240817 21:23:03.533" endtime="20240817 21:23:03.543"/>
+</kw>
+<status status="PASS" starttime="20240817 21:23:03.488" endtime="20240817 21:23:03.543"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240817 21:23:03.543" endtime="20240817 21:23:05.699"/>
+</kw>
+<status status="PASS" starttime="20240817 21:22:51.458" endtime="20240817 21:23:05.700"/>
+</test>
+<doc>This is For Assignment 2 Create an Automated Test for the user journey of shopping cart checkout</doc>
+<status status="PASS" starttime="20240817 21:22:44.991" endtime="20240817 21:23:05.701"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="UISauceDemoBuyBackPack">UISauceDemoBuyBackPack</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
