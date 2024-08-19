@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This is For Assignment 2 Create an Automated Test for the user journey of shopping cart checkout
+Documentation    This is For Assignment 4 Negative Test Of Check Rate Menu
 Resource    ../PageObject/LionParcelLoginPage.robot
 Resource    ../PageObject/LionParcelHomePage.robot
 Resource    ../PageObject/LionParcelCheckRatePage.robot

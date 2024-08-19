@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This is For Assignment 2 Create an Automated Test for the user journey of shopping cart checkout
+Documentation    This is For Assignment 4 Positive Test Of Check Rate Menu
 Resource    ../PageObject/LionParcelLoginPage.robot
 Resource    ../PageObject/LionParcelHomePage.robot
 Resource    ../PageObject/LionParcelCheckRatePage.robot
@@ -24,7 +24,7 @@ Scenario : Open Lion Parcel Android App And Check Rate With Destination SubDistr
     Then LionParcelCheckRatePage.Permission Pop Up Will Be Disappear And Check Rate Page Element Will Be Appear
     When LionParcelCheckRatePage.User Click Destination Address Field
     Then LionParcelSearchLocationPage.Search Location Page Will Be Appear
-    When LionParcelSearchLocationPage.User Fill Route Search Field Same With Origin Address And Click Search Result
+    When LionParcelSearchLocationPage.User Fill Route Search Field Same With    ${global_origin_address_text}
     Then LionParcelCheckRatePage.Check Rate Page Element Will Be Appear And Destination Address Will Be Filled With Choosen Sub District Address
     When LionParcelCheckRatePage.User Click Check Rate Button
     Then LionParcelCheckRatePage.Default Weight And List Service With Rate Will Be Appear

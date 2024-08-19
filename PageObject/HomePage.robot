@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${app_logo_xpath_class}     app_logo
 ${burger_menu_xpath_id}     react-burger-menu-btn
+${logout_sidebar_menu_xpath_id}     //a[@data-test='logout-sidebar-link']
 ${shopping_cart_xpath_id}     shopping_cart_container
 ${product_title_xpath}     //span[@data-test='title']
 ${product_sort_container_xpath}     //select[@data-test='product-sort-container']
@@ -26,6 +27,11 @@ User Click Item
     click element    ${backpack_a_xpath}
     Sleep    2s
 
+User Click Log Out
+    click element    ${burger_menu_xpath_id}
+    Sleep    2s
+    click element   ${logout_sidebar_menu_xpath_id}
+    Sleep    2s
 
 
 

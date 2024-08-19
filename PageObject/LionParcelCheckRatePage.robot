@@ -16,11 +16,10 @@ ${default_total_weight}     1
 ${total_weight_xpath_id}  com.lionparcel.services.consumer:id/edtTotalWeight
 ${add_ddtl_button_xpath_id}  com.lionparcel.services.consumer:id/btnAddDetail
 ${product_rate_layout_xpath_id}     com.lionparcel.services.consumer:id/layoutTariffProductCard
-${def_service_xpath_id}     com.lionparcel.services.consumer:id/txtTotalTariffEstimation
+${product_type_xpath_id}     com.lionparcel.services.consumer:id/rvProductType
 
 ${total_rate_est_xpath_id}     com.lionparcel.services.consumer:id/txtTotalTariffEstimation
 ${pick_up_button_xpath_id}     com.lionparcel.services.consumer:id/buttonPickUp
-
 
 
 *** Keywords ***
@@ -67,8 +66,9 @@ Default Weight And List Service With Rate Will Be Appear
     should be equal    ${total_weight_text}       ${default_total_weight}
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${add_ddtl_button_xpath_id}     ${time_out_element_visible}
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${product_rate_layout_xpath_id}     ${time_out_element_visible}
-    APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${def_service_xpath_id}     ${time_out_element_visible}
-    APPIUMLIBRARY.Execute Script    mobile: swipe    {"startX": 500, "startY": 1000, "endX": 500, "endY": 100, "duration": 1000}
-    sleep    3s
+    APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${product_type_xpath_id}     ${time_out_element_visible}
+
+    APPIUMLIBRARY.Swipe    ${1056}    ${2186}    ${1042}    ${268}
+    sleep    2s
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${total_rate_est_xpath_id}     ${time_out_element_visible}
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${pick_up_button_xpath_id}     ${time_out_element_visible}

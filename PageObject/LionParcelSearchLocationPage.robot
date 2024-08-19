@@ -20,6 +20,7 @@ ${city_name_text_xpath_id}     com.lionparcel.services.consumer:id/txtCityRouteN
 
 ${one_char_text}    a
 ${wrong_destination_text}   zzzzz
+${destination_outside_java}  Sorong Barat
 ${err_msg_text_xpath_id}  com.lionparcel.services.consumer:id/txtErrorMessage
 ${err_msg_text_should_be}   Minimal 3 karakter
 ${location_not_found_text_xpath}  //android.widget.TextView[@text="Lokasi tidak ditemukan"]
@@ -35,8 +36,9 @@ Search Location Page Will Be Appear
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${llKeyword_xpath_id}     ${time_out_element_visible}
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${route_edit_xpath_id}     ${time_out_element_visible}
 
-User Fill Route Search Field Same With Origin Address And Click Search Result
-    input text    id=${route_edit_xpath_id}   ${global_origin_address_text}
+User Fill Route Search Field Same With
+    [Arguments]    ${route_name}
+    input text    id=${route_edit_xpath_id}   ${route_name}
     sleep    3s
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${route_result_xpath_id}     ${time_out_element_visible}
     APPIUMLIBRARY.WAIT UNTIL ELEMENT IS VISIBLE    id=${row_result_xpath_id}     ${time_out_element_visible}
@@ -48,6 +50,7 @@ User Fill Route Search Field Same With Origin Address And Click Search Result
     Set Global Variable     ${global_destination_address}      ${destination_address}
     AppiumLibrary.click element    id=${row_result_xpath_id}
     sleep    2s
+
 
 User Fill Route Search Field Only With 1 Character
     input text    id=${route_edit_xpath_id}   ${one_char_text}

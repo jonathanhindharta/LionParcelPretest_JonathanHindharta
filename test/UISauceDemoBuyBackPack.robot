@@ -35,6 +35,8 @@ Scenario : User Open Cart Page And Proceed Until Payment
     Then CheckOutCompletePage.User Should Redirect To Check Out Complete Page
     When CheckOutCompletePage.User Click Back To Product Button
     Then HomePage.User Should Redirect To Home Page
+    When HomePage.User Click Log Out
+    Then LoginPage.Login Page Element Should Be Loaded
     close browser
 
 

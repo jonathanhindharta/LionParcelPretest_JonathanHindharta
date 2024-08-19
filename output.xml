@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20240818 23:48:40.877" rpa="false" schemaversion="3">
-<suite id="s1" name="MobileLionParcelCheckRateNegative" source="D:\Project\LionParcelPretest_JonathanHindharta\test\MobileLionParcelCheckRateNegative.robot">
-<test id="s1-t1" name="Scenario : Open Lion Parcel Android App And Check Rate With Input Wrong Destinantion" line="10">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20240819 14:30:27.373" rpa="false" schemaversion="3">
+<suite id="s1" name="MobileLionParcelCheckRatePositive2" source="D:\Project\LionParcelPretest_JonathanHindharta\test\MobileLionParcelCheckRatePositive2.robot">
+<test id="s1-t1" name="Scenario : Open Lion Parcel Android App And Check Rate With Destination SubDistrict Outside Java" line="12">
 <kw name="Given LionParcelLoginPage.User Open Lion Parcel App Home Page" library="LionParcelLoginPage">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${remote_url}</arg>
@@ -18,524 +18,697 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" starttime="20240818 23:48:41.059" endtime="20240818 23:48:51.501"/>
+<status status="PASS" starttime="20240819 14:30:27.569" endtime="20240819 14:30:38.154"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:41.058" endtime="20240818 23:48:51.501"/>
+<status status="PASS" starttime="20240819 14:30:27.569" endtime="20240819 14:30:38.154"/>
 </kw>
 <kw name="Then LionParcelLoginPage.User Will Be Redirected To Login Page And Pop Up Privacy Policy Appear" library="LionParcelLoginPage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${privacy_policy_list_xpath_id}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:52.869" level="INFO">criteria is com.lionparcel.services.consumer:id/llListItem</msg>
-<status status="PASS" starttime="20240818 23:48:51.502" endtime="20240818 23:48:52.869"/>
+<msg timestamp="20240819 14:30:40.076" level="INFO">criteria is com.lionparcel.services.consumer:id/llListItem</msg>
+<status status="PASS" starttime="20240819 14:30:38.154" endtime="20240819 14:30:40.076"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${disagree_button_xpath_id}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:52.901" level="INFO">criteria is com.lionparcel.services.consumer:id/btnDisagree</msg>
-<status status="PASS" starttime="20240818 23:48:52.869" endtime="20240818 23:48:52.901"/>
+<msg timestamp="20240819 14:30:40.122" level="INFO">criteria is com.lionparcel.services.consumer:id/btnDisagree</msg>
+<status status="PASS" starttime="20240819 14:30:40.076" endtime="20240819 14:30:40.122"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${agree_button_xpath_id}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:52.935" level="INFO">criteria is com.lionparcel.services.consumer:id/btnAgree</msg>
-<status status="PASS" starttime="20240818 23:48:52.902" endtime="20240818 23:48:52.935"/>
+<msg timestamp="20240819 14:30:40.171" level="INFO">criteria is com.lionparcel.services.consumer:id/btnAgree</msg>
+<status status="PASS" starttime="20240819 14:30:40.123" endtime="20240819 14:30:40.171"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:51.502" endtime="20240818 23:48:52.935"/>
+<status status="PASS" starttime="20240819 14:30:38.154" endtime="20240819 14:30:40.171"/>
 </kw>
 <kw name="When LionParcelLoginPage.User Click Agree Button in Privacy Policy Pop Up" library="LionParcelLoginPage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${agree_button_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:48:52.938" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/btnAgree'.</msg>
-<msg timestamp="20240818 23:48:53.005" level="INFO">criteria is com.lionparcel.services.consumer:id/btnAgree</msg>
-<status status="PASS" starttime="20240818 23:48:52.936" endtime="20240818 23:48:53.005"/>
+<msg timestamp="20240819 14:30:40.175" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/btnAgree'.</msg>
+<msg timestamp="20240819 14:30:41.298" level="INFO">criteria is com.lionparcel.services.consumer:id/btnAgree</msg>
+<status status="PASS" starttime="20240819 14:30:40.172" endtime="20240819 14:30:41.298"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:48:55.018" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240818 23:48:53.005" endtime="20240818 23:48:55.018"/>
+<msg timestamp="20240819 14:30:43.305" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240819 14:30:41.298" endtime="20240819 14:30:43.305"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:52.935" endtime="20240818 23:48:55.018"/>
+<status status="PASS" starttime="20240819 14:30:40.172" endtime="20240819 14:30:43.305"/>
 </kw>
 <kw name="Then LionParcelLoginPage.Pop Up Privacy Policy Will Be Disappear And Login Page Will Be Loaded" library="LionParcelLoginPage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${register_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:55.142" level="INFO">criteria is com.lionparcel.services.consumer:id/btnRegister</msg>
-<status status="PASS" starttime="20240818 23:48:55.019" endtime="20240818 23:48:55.142"/>
+<msg timestamp="20240819 14:30:43.397" level="INFO">criteria is com.lionparcel.services.consumer:id/btnRegister</msg>
+<status status="PASS" starttime="20240819 14:30:43.306" endtime="20240819 14:30:43.397"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${login_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:55.225" level="INFO">criteria is com.lionparcel.services.consumer:id/btnLogin</msg>
-<status status="PASS" starttime="20240818 23:48:55.142" endtime="20240818 23:48:55.225"/>
+<msg timestamp="20240819 14:30:43.477" level="INFO">criteria is com.lionparcel.services.consumer:id/btnLogin</msg>
+<status status="PASS" starttime="20240819 14:30:43.397" endtime="20240819 14:30:43.477"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${sign_in_google_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:55.311" level="INFO">criteria is com.lionparcel.services.consumer:id/clGoogle</msg>
-<status status="PASS" starttime="20240818 23:48:55.226" endtime="20240818 23:48:55.311"/>
+<msg timestamp="20240819 14:30:43.567" level="INFO">criteria is com.lionparcel.services.consumer:id/clGoogle</msg>
+<status status="PASS" starttime="20240819 14:30:43.477" endtime="20240819 14:30:43.567"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${skip_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:48:56.138" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
-<status status="PASS" starttime="20240818 23:48:55.311" endtime="20240818 23:48:56.138"/>
+<msg timestamp="20240819 14:30:43.643" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
+<status status="PASS" starttime="20240819 14:30:43.567" endtime="20240819 14:30:43.643"/>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <var>${skip_button_text}</var>
 <arg>id=${skip_button_xpath_id}</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20240818 23:48:56.252" level="INFO">Element 'id=com.lionparcel.services.consumer:id/txtSkip' text is 'Lanjutkan Tanpa Akun' </msg>
-<msg timestamp="20240818 23:48:56.252" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
-<msg timestamp="20240818 23:48:56.252" level="INFO">${skip_button_text} = Lanjutkan Tanpa Akun</msg>
-<status status="PASS" starttime="20240818 23:48:56.139" endtime="20240818 23:48:56.252"/>
+<msg timestamp="20240819 14:30:43.730" level="INFO">Element 'id=com.lionparcel.services.consumer:id/txtSkip' text is 'Lanjutkan Tanpa Akun' </msg>
+<msg timestamp="20240819 14:30:43.730" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
+<msg timestamp="20240819 14:30:43.730" level="INFO">${skip_button_text} = Lanjutkan Tanpa Akun</msg>
+<status status="PASS" starttime="20240819 14:30:43.643" endtime="20240819 14:30:43.730"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${skip_button_text}</arg>
 <arg>${skip_button_text_should_be}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20240818 23:48:56.252" endtime="20240818 23:48:56.253"/>
+<status status="PASS" starttime="20240819 14:30:43.730" endtime="20240819 14:30:43.730"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:55.019" endtime="20240818 23:48:56.253"/>
+<status status="PASS" starttime="20240819 14:30:43.305" endtime="20240819 14:30:43.730"/>
 </kw>
 <kw name="When LionParcelLoginPage.User Click Continue Without Account" library="LionParcelLoginPage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${skip_button_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:48:56.255" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/txtSkip'.</msg>
-<msg timestamp="20240818 23:48:56.421" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
-<status status="PASS" starttime="20240818 23:48:56.253" endtime="20240818 23:48:56.421"/>
+<msg timestamp="20240819 14:30:43.733" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/txtSkip'.</msg>
+<msg timestamp="20240819 14:30:43.872" level="INFO">criteria is com.lionparcel.services.consumer:id/txtSkip</msg>
+<status status="PASS" starttime="20240819 14:30:43.731" endtime="20240819 14:30:43.872"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:49:03.436" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20240818 23:48:56.421" endtime="20240818 23:49:03.436"/>
+<msg timestamp="20240819 14:30:50.875" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20240819 14:30:43.872" endtime="20240819 14:30:50.875"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:56.253" endtime="20240818 23:49:03.436"/>
+<status status="PASS" starttime="20240819 14:30:43.731" endtime="20240819 14:30:50.875"/>
 </kw>
 <kw name="Then LionParcelHomePage.Lion Parcel Home Page With Pop Up Tracking Will Appear" library="LionParcelHomePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${tittle_text_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:49:44.205" level="INFO">criteria is com.lionparcel.services.consumer:id/txtTittle
+<msg timestamp="20240819 14:31:31.555" level="INFO">criteria is com.lionparcel.services.consumer:id/txtTittle
 criteria is com.lionparcel.services.consumer:id/txtTittle</msg>
-<status status="PASS" starttime="20240818 23:49:03.437" endtime="20240818 23:49:44.205"/>
+<status status="PASS" starttime="20240819 14:30:50.876" endtime="20240819 14:31:31.555"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${pop_up_tracking_close_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:14.820" level="INFO">criteria is com.lionparcel.services.consumer:id/ivClose</msg>
-<status status="PASS" starttime="20240818 23:49:44.205" endtime="20240818 23:50:14.820"/>
+<msg timestamp="20240819 14:32:02.101" level="INFO">criteria is com.lionparcel.services.consumer:id/ivClose</msg>
+<status status="PASS" starttime="20240819 14:31:31.555" endtime="20240819 14:32:02.102"/>
 </kw>
-<status status="PASS" starttime="20240818 23:49:03.437" endtime="20240818 23:50:14.820"/>
+<status status="PASS" starttime="20240819 14:30:50.875" endtime="20240819 14:32:02.102"/>
 </kw>
 <kw name="When LionParcelHomePage.User Click Close Pop Up Tracking Button" library="LionParcelHomePage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${pop_up_tracking_close_button_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:50:14.823" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/ivClose'.</msg>
-<msg timestamp="20240818 23:50:46.210" level="INFO">criteria is com.lionparcel.services.consumer:id/ivClose</msg>
-<status status="PASS" starttime="20240818 23:50:14.821" endtime="20240818 23:50:46.210"/>
+<msg timestamp="20240819 14:32:02.104" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/ivClose'.</msg>
+<msg timestamp="20240819 14:32:33.483" level="INFO">criteria is com.lionparcel.services.consumer:id/ivClose</msg>
+<status status="PASS" starttime="20240819 14:32:02.102" endtime="20240819 14:32:33.483"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:14.820" endtime="20240818 23:50:46.210"/>
+<status status="PASS" starttime="20240819 14:32:02.102" endtime="20240819 14:32:33.483"/>
 </kw>
 <kw name="Then LionParcelHomePage.Pick Up Offer Pop Up Will Appear" library="LionParcelHomePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${pick_up_pop_up_xpath_id}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:46.309" level="INFO">criteria is com.lionparcel.services.consumer:id/mcvParent</msg>
-<status status="PASS" starttime="20240818 23:50:46.211" endtime="20240818 23:50:46.310"/>
+<msg timestamp="20240819 14:32:33.573" level="INFO">criteria is com.lionparcel.services.consumer:id/mcvParent</msg>
+<status status="PASS" starttime="20240819 14:32:33.484" endtime="20240819 14:32:33.573"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${pick_up_close_xpath_id}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:46.406" level="INFO">criteria is com.lionparcel.services.consumer:id/imgClose</msg>
-<status status="PASS" starttime="20240818 23:50:46.310" endtime="20240818 23:50:46.406"/>
+<msg timestamp="20240819 14:32:33.645" level="INFO">criteria is com.lionparcel.services.consumer:id/imgClose</msg>
+<status status="PASS" starttime="20240819 14:32:33.573" endtime="20240819 14:32:33.645"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:46.211" endtime="20240818 23:50:46.408"/>
+<status status="PASS" starttime="20240819 14:32:33.484" endtime="20240819 14:32:33.645"/>
 </kw>
 <kw name="When LionParcelHomePage.User Click Close Pick Up Offer Pop Up" library="LionParcelHomePage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${pick_up_close_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:50:46.410" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/imgClose'.</msg>
-<msg timestamp="20240818 23:50:46.564" level="INFO">criteria is com.lionparcel.services.consumer:id/imgClose</msg>
-<status status="PASS" starttime="20240818 23:50:46.408" endtime="20240818 23:50:46.564"/>
+<msg timestamp="20240819 14:32:33.648" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/imgClose'.</msg>
+<msg timestamp="20240819 14:32:33.775" level="INFO">criteria is com.lionparcel.services.consumer:id/imgClose</msg>
+<status status="PASS" starttime="20240819 14:32:33.646" endtime="20240819 14:32:33.775"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:46.408" endtime="20240818 23:50:46.564"/>
+<status status="PASS" starttime="20240819 14:32:33.645" endtime="20240819 14:32:33.775"/>
 </kw>
 <kw name="Then LionParcelHomePage.Pick Up Offer Pop Up Will Be Closed and User Can See All Menu in Home Page" library="LionParcelHomePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${input_stt_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:47.616" level="INFO">criteria is com.lionparcel.services.consumer:id/txtInputStt</msg>
-<status status="PASS" starttime="20240818 23:50:46.565" endtime="20240818 23:50:47.616"/>
+<msg timestamp="20240819 14:32:35.106" level="INFO">criteria is com.lionparcel.services.consumer:id/txtInputStt</msg>
+<status status="PASS" starttime="20240819 14:32:33.776" endtime="20240819 14:32:35.106"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${chat_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:47.800" level="INFO">criteria is com.lionparcel.services.consumer:id/ivChat</msg>
-<status status="PASS" starttime="20240818 23:50:47.616" endtime="20240818 23:50:47.800"/>
+<msg timestamp="20240819 14:32:35.275" level="INFO">criteria is com.lionparcel.services.consumer:id/ivChat</msg>
+<status status="PASS" starttime="20240819 14:32:35.106" endtime="20240819 14:32:35.275"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${imgnotification_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:48.003" level="INFO">criteria is com.lionparcel.services.consumer:id/imgNotification</msg>
-<status status="PASS" starttime="20240818 23:50:47.800" endtime="20240818 23:50:48.004"/>
+<msg timestamp="20240819 14:32:35.441" level="INFO">criteria is com.lionparcel.services.consumer:id/imgNotification</msg>
+<status status="PASS" starttime="20240819 14:32:35.275" endtime="20240819 14:32:35.441"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${member_desc_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:48.178" level="INFO">criteria is com.lionparcel.services.consumer:id/llMembershipDescription</msg>
-<status status="PASS" starttime="20240818 23:50:48.004" endtime="20240818 23:50:48.178"/>
+<msg timestamp="20240819 14:32:35.589" level="INFO">criteria is com.lionparcel.services.consumer:id/llMembershipDescription</msg>
+<status status="PASS" starttime="20240819 14:32:35.441" endtime="20240819 14:32:35.589"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${disc_alert_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:48.365" level="INFO">criteria is com.lionparcel.services.consumer:id/llAlert</msg>
-<status status="PASS" starttime="20240818 23:50:48.178" endtime="20240818 23:50:48.365"/>
+<msg timestamp="20240819 14:32:35.733" level="INFO">criteria is com.lionparcel.services.consumer:id/llAlert</msg>
+<status status="PASS" starttime="20240819 14:32:35.589" endtime="20240819 14:32:35.733"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${pick_up_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:49.068" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[4]</msg>
-<status status="PASS" starttime="20240818 23:50:48.365" endtime="20240818 23:50:49.068"/>
+<msg timestamp="20240819 14:32:36.380" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[4]</msg>
+<status status="PASS" starttime="20240819 14:32:35.733" endtime="20240819 14:32:36.380"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${drop_package_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:49.283" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[5]</msg>
-<status status="PASS" starttime="20240818 23:50:49.068" endtime="20240818 23:50:49.283"/>
+<msg timestamp="20240819 14:32:36.622" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[5]</msg>
+<status status="PASS" starttime="20240819 14:32:36.380" endtime="20240819 14:32:36.622"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${check_rate_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:49.484" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]</msg>
-<status status="PASS" starttime="20240818 23:50:49.283" endtime="20240818 23:50:49.484"/>
+<msg timestamp="20240819 14:32:36.877" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]</msg>
+<status status="PASS" starttime="20240819 14:32:36.622" endtime="20240819 14:32:36.877"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${fill_together_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:49.722" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[7]</msg>
-<status status="PASS" starttime="20240818 23:50:49.484" endtime="20240818 23:50:49.722"/>
+<msg timestamp="20240819 14:32:37.139" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[7]</msg>
+<status status="PASS" starttime="20240819 14:32:36.877" endtime="20240819 14:32:37.139"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${claim_package_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:50.019" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[8]</msg>
-<status status="PASS" starttime="20240818 23:50:49.722" endtime="20240818 23:50:50.019"/>
+<msg timestamp="20240819 14:32:37.381" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[8]</msg>
+<status status="PASS" starttime="20240819 14:32:37.139" endtime="20240819 14:32:37.382"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${report_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:50.256" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[9]</msg>
-<status status="PASS" starttime="20240818 23:50:50.019" endtime="20240818 23:50:51.213"/>
+<msg timestamp="20240819 14:32:37.568" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[9]</msg>
+<status status="PASS" starttime="20240819 14:32:37.382" endtime="20240819 14:32:38.515"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${claim_package_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:52.282" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[8]</msg>
-<status status="PASS" starttime="20240818 23:50:51.213" endtime="20240818 23:50:52.282"/>
+<msg timestamp="20240819 14:32:38.789" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[8]</msg>
+<status status="PASS" starttime="20240819 14:32:38.516" endtime="20240819 14:32:38.790"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${cs_liona_menu_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:52.544" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[10]</msg>
-<status status="PASS" starttime="20240818 23:50:52.282" endtime="20240818 23:50:52.544"/>
+<msg timestamp="20240819 14:32:38.996" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[10]</msg>
+<status status="PASS" starttime="20240819 14:32:38.790" endtime="20240819 14:32:38.996"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${home_nav_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:52.796" level="INFO">criteria is com.lionparcel.services.consumer:id/navHome</msg>
-<status status="PASS" starttime="20240818 23:50:52.544" endtime="20240818 23:50:52.796"/>
+<msg timestamp="20240819 14:32:39.156" level="INFO">criteria is com.lionparcel.services.consumer:id/navHome</msg>
+<status status="PASS" starttime="20240819 14:32:38.996" endtime="20240819 14:32:39.156"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${chat_nav_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:52.973" level="INFO">criteria is com.lionparcel.services.consumer:id/navTrack</msg>
-<status status="PASS" starttime="20240818 23:50:52.796" endtime="20240818 23:50:52.973"/>
+<msg timestamp="20240819 14:32:39.304" level="INFO">criteria is com.lionparcel.services.consumer:id/navTrack</msg>
+<status status="PASS" starttime="20240819 14:32:39.156" endtime="20240819 14:32:39.305"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${payment_nav_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:53.128" level="INFO">criteria is com.lionparcel.services.consumer:id/navPayment</msg>
-<status status="PASS" starttime="20240818 23:50:52.973" endtime="20240818 23:50:53.128"/>
+<msg timestamp="20240819 14:32:40.166" level="INFO">criteria is com.lionparcel.services.consumer:id/navPayment</msg>
+<status status="PASS" starttime="20240819 14:32:39.305" endtime="20240819 14:32:40.166"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${account_nav_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:53.307" level="INFO">criteria is com.lionparcel.services.consumer:id/navAccount</msg>
-<status status="PASS" starttime="20240818 23:50:53.129" endtime="20240818 23:50:53.307"/>
+<msg timestamp="20240819 14:32:40.319" level="INFO">criteria is com.lionparcel.services.consumer:id/navAccount</msg>
+<status status="PASS" starttime="20240819 14:32:40.166" endtime="20240819 14:32:40.319"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:46.565" endtime="20240818 23:50:53.307"/>
+<status status="PASS" starttime="20240819 14:32:33.776" endtime="20240819 14:32:40.319"/>
 </kw>
 <kw name="When LionParcelHomePage.User Click Check Rate Menu" library="LionParcelHomePage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>xpath=${check_rate_menu_xpath}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:50:53.310" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]'.</msg>
-<msg timestamp="20240818 23:50:53.640" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]</msg>
-<status status="PASS" starttime="20240818 23:50:53.308" endtime="20240818 23:50:53.640"/>
+<msg timestamp="20240819 14:32:40.322" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]'.</msg>
+<msg timestamp="20240819 14:32:40.620" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[6]</msg>
+<status status="PASS" starttime="20240819 14:32:40.320" endtime="20240819 14:32:40.620"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:50:55.653" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240818 23:50:53.640" endtime="20240818 23:50:55.653"/>
+<msg timestamp="20240819 14:32:42.637" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240819 14:32:40.621" endtime="20240819 14:32:42.637"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:53.308" endtime="20240818 23:50:55.653"/>
+<status status="PASS" starttime="20240819 14:32:40.320" endtime="20240819 14:32:42.637"/>
 </kw>
 <kw name="Then LionParcelCheckRatePage.Check Rate Page With Permission Pop Up Will Be Appear" library="LionParcelCheckRatePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${permission_foreground_button_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:55.750" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
-<status status="PASS" starttime="20240818 23:50:55.654" endtime="20240818 23:50:55.750"/>
+<msg timestamp="20240819 14:32:42.733" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20240819 14:32:42.638" endtime="20240819 14:32:42.734"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:55.654" endtime="20240818 23:50:55.750"/>
+<status status="PASS" starttime="20240819 14:32:42.637" endtime="20240819 14:32:42.734"/>
 </kw>
 <kw name="When LionParcelCheckRatePage.User Click Allow Fore Ground Permission Only Button" library="LionParcelCheckRatePage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${permission_foreground_button_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:50:55.753" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
-<msg timestamp="20240818 23:50:55.879" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
-<status status="PASS" starttime="20240818 23:50:55.750" endtime="20240818 23:50:55.879"/>
+<msg timestamp="20240819 14:32:42.736" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<msg timestamp="20240819 14:32:42.856" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20240819 14:32:42.734" endtime="20240819 14:32:42.856"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:50:57.894" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240818 23:50:55.879" endtime="20240818 23:50:57.894"/>
+<msg timestamp="20240819 14:32:44.861" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240819 14:32:42.856" endtime="20240819 14:32:44.861"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:55.750" endtime="20240818 23:50:57.894"/>
+<status status="PASS" starttime="20240819 14:32:42.734" endtime="20240819 14:32:44.861"/>
 </kw>
 <kw name="Then LionParcelCheckRatePage.Permission Pop Up Will Be Disappear And Check Rate Page Element Will Be Appear" library="LionParcelCheckRatePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${check_rate_title_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:58.576" level="INFO">xpath criteria: //android.widget.TextView[@text="Cek Tarif untuk Pengirimanmu"]</msg>
-<status status="PASS" starttime="20240818 23:50:57.894" endtime="20240818 23:50:58.576"/>
+<msg timestamp="20240819 14:32:45.545" level="INFO">xpath criteria: //android.widget.TextView[@text="Cek Tarif untuk Pengirimanmu"]</msg>
+<status status="PASS" starttime="20240819 14:32:44.862" endtime="20240819 14:32:45.545"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${origin_address_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:58.676" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
-<status status="PASS" starttime="20240818 23:50:58.576" endtime="20240818 23:50:58.676"/>
+<msg timestamp="20240819 14:32:45.648" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
+<status status="PASS" starttime="20240819 14:32:45.545" endtime="20240819 14:32:45.648"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${destination_address_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:58.802" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
-<status status="PASS" starttime="20240818 23:50:58.676" endtime="20240818 23:50:58.802"/>
+<msg timestamp="20240819 14:32:45.741" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
+<status status="PASS" starttime="20240819 14:32:45.648" endtime="20240819 14:32:45.741"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${switch_button_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:58.974" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[3]</msg>
-<status status="PASS" starttime="20240818 23:50:58.802" endtime="20240818 23:50:58.975"/>
+<msg timestamp="20240819 14:32:45.882" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[3]</msg>
+<status status="PASS" starttime="20240819 14:32:45.741" endtime="20240819 14:32:45.883"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${check_rate_button_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:50:59.034" level="INFO">criteria is com.lionparcel.services.consumer:id/btnCheckTariff</msg>
-<status status="PASS" starttime="20240818 23:50:58.975" endtime="20240818 23:50:59.034"/>
+<msg timestamp="20240819 14:32:45.943" level="INFO">criteria is com.lionparcel.services.consumer:id/btnCheckTariff</msg>
+<status status="PASS" starttime="20240819 14:32:45.883" endtime="20240819 14:32:45.943"/>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <var>${origin_address_text}</var>
 <arg>id=${origin_address_xpath_id}</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20240818 23:50:59.159" level="INFO">Element 'id=com.lionparcel.services.consumer:id/edtOriginAddress' text is 'Panongan, Tangerang (TNG)' </msg>
-<msg timestamp="20240818 23:50:59.159" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
-<msg timestamp="20240818 23:50:59.159" level="INFO">${origin_address_text} = Panongan, Tangerang (TNG)</msg>
-<status status="PASS" starttime="20240818 23:50:59.034" endtime="20240818 23:50:59.159"/>
+<msg timestamp="20240819 14:32:46.040" level="INFO">Element 'id=com.lionparcel.services.consumer:id/edtOriginAddress' text is 'Panongan, Tangerang (TNG)' </msg>
+<msg timestamp="20240819 14:32:46.040" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
+<msg timestamp="20240819 14:32:46.040" level="INFO">${origin_address_text} = Panongan, Tangerang (TNG)</msg>
+<status status="PASS" starttime="20240819 14:32:45.943" endtime="20240819 14:32:46.040"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${global_origin_address_text}</arg>
 <arg>${origin_address_text}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240818 23:50:59.161" level="INFO">${global_origin_address_text} = Panongan, Tangerang (TNG)</msg>
-<status status="PASS" starttime="20240818 23:50:59.159" endtime="20240818 23:50:59.161"/>
+<msg timestamp="20240819 14:32:46.042" level="INFO">${global_origin_address_text} = Panongan, Tangerang (TNG)</msg>
+<status status="PASS" starttime="20240819 14:32:46.040" endtime="20240819 14:32:46.042"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${origin_address_text}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20240818 23:50:59.161" level="INFO">Length is 25</msg>
-<status status="PASS" starttime="20240818 23:50:59.161" endtime="20240818 23:50:59.161"/>
+<msg timestamp="20240819 14:32:46.042" level="INFO">Length is 25</msg>
+<status status="PASS" starttime="20240819 14:32:46.042" endtime="20240819 14:32:46.042"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:57.894" endtime="20240818 23:50:59.161"/>
+<status status="PASS" starttime="20240819 14:32:44.861" endtime="20240819 14:32:46.042"/>
 </kw>
 <kw name="When LionParcelCheckRatePage.User Click Destination Address Field" library="LionParcelCheckRatePage">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>id=${destination_address_xpath_id}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20240818 23:50:59.163" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/edtDestinationAddress'.</msg>
-<msg timestamp="20240818 23:50:59.353" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
-<status status="PASS" starttime="20240818 23:50:59.161" endtime="20240818 23:50:59.353"/>
+<msg timestamp="20240819 14:32:46.045" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/edtDestinationAddress'.</msg>
+<msg timestamp="20240819 14:32:46.187" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
+<status status="PASS" starttime="20240819 14:32:46.043" endtime="20240819 14:32:46.187"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>7s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:51:06.358" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20240818 23:50:59.353" endtime="20240818 23:51:06.358"/>
+<msg timestamp="20240819 14:32:53.189" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20240819 14:32:46.187" endtime="20240819 14:32:53.189"/>
 </kw>
-<status status="PASS" starttime="20240818 23:50:59.161" endtime="20240818 23:51:06.358"/>
+<status status="PASS" starttime="20240819 14:32:46.043" endtime="20240819 14:32:53.189"/>
 </kw>
 <kw name="Then LionParcelSearchLocationPage.Search Location Page Will Be Appear" library="LionParcelSearchLocationPage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${col_toolbar_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:06.437" level="INFO">criteria is com.lionparcel.services.consumer:id/collapsingToolbar</msg>
-<status status="PASS" starttime="20240818 23:51:06.359" endtime="20240818 23:51:06.437"/>
+<msg timestamp="20240819 14:32:53.265" level="INFO">criteria is com.lionparcel.services.consumer:id/collapsingToolbar</msg>
+<status status="PASS" starttime="20240819 14:32:53.190" endtime="20240819 14:32:53.265"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${toolbar_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:06.505" level="INFO">criteria is com.lionparcel.services.consumer:id/toolbar</msg>
-<status status="PASS" starttime="20240818 23:51:06.438" endtime="20240818 23:51:06.505"/>
+<msg timestamp="20240819 14:32:53.323" level="INFO">criteria is com.lionparcel.services.consumer:id/toolbar</msg>
+<status status="PASS" starttime="20240819 14:32:53.265" endtime="20240819 14:32:53.323"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=${relative_layout_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:06.613" level="INFO">xpath criteria: //android.widget.RelativeLayout</msg>
-<status status="PASS" starttime="20240818 23:51:06.506" endtime="20240818 23:51:06.613"/>
+<msg timestamp="20240819 14:32:53.412" level="INFO">xpath criteria: //android.widget.RelativeLayout</msg>
+<status status="PASS" starttime="20240819 14:32:53.323" endtime="20240819 14:32:53.412"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${llKeyword_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:06.693" level="INFO">criteria is com.lionparcel.services.consumer:id/llKeyword</msg>
-<status status="PASS" starttime="20240818 23:51:06.613" endtime="20240818 23:51:06.693"/>
+<msg timestamp="20240819 14:32:53.475" level="INFO">criteria is com.lionparcel.services.consumer:id/llKeyword</msg>
+<status status="PASS" starttime="20240819 14:32:53.413" endtime="20240819 14:32:53.475"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=${route_edit_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:06.770" level="INFO">criteria is com.lionparcel.services.consumer:id/edtRouteSearch</msg>
-<status status="PASS" starttime="20240818 23:51:06.693" endtime="20240818 23:51:06.770"/>
+<msg timestamp="20240819 14:32:53.540" level="INFO">criteria is com.lionparcel.services.consumer:id/edtRouteSearch</msg>
+<status status="PASS" starttime="20240819 14:32:53.475" endtime="20240819 14:32:53.540"/>
 </kw>
-<status status="PASS" starttime="20240818 23:51:06.359" endtime="20240818 23:51:06.771"/>
+<status status="PASS" starttime="20240819 14:32:53.190" endtime="20240819 14:32:53.540"/>
 </kw>
-<kw name="When LionParcelSearchLocationPage.User Fill Route Search Field Only With 1 Character" library="LionParcelSearchLocationPage">
+<kw name="When LionParcelSearchLocationPage.User Fill Route Search Field Same With" library="LionParcelSearchLocationPage">
+<arg>${destination_outside_java}</arg>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>id=${route_edit_xpath_id}</arg>
-<arg>${one_char_text}</arg>
+<arg>${route_name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20240818 23:51:06.773" level="INFO">Typing text 'a' into text field 'id=com.lionparcel.services.consumer:id/edtRouteSearch'</msg>
-<msg timestamp="20240818 23:51:06.913" level="INFO">criteria is com.lionparcel.services.consumer:id/edtRouteSearch</msg>
-<status status="PASS" starttime="20240818 23:51:06.771" endtime="20240818 23:51:06.913"/>
+<msg timestamp="20240819 14:32:53.544" level="INFO">Typing text 'Sorong Barat' into text field 'id=com.lionparcel.services.consumer:id/edtRouteSearch'</msg>
+<msg timestamp="20240819 14:32:53.669" level="INFO">criteria is com.lionparcel.services.consumer:id/edtRouteSearch</msg>
+<status status="PASS" starttime="20240819 14:32:53.541" endtime="20240819 14:32:53.669"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:51:08.927" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240818 23:51:06.913" endtime="20240818 23:51:08.927"/>
+<msg timestamp="20240819 14:32:56.678" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240819 14:32:53.669" endtime="20240819 14:32:56.678"/>
 </kw>
-<status status="PASS" starttime="20240818 23:51:06.771" endtime="20240818 23:51:08.927"/>
-</kw>
-<kw name="Then LionParcelSearchLocationPage.Warning Of Minimum 3 Character Will Be Appear" library="LionParcelSearchLocationPage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=${err_msg_text_xpath_id}</arg>
+<arg>id=${route_result_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:09.022" level="INFO">criteria is com.lionparcel.services.consumer:id/txtErrorMessage</msg>
-<status status="PASS" starttime="20240818 23:51:08.928" endtime="20240818 23:51:09.022"/>
+<msg timestamp="20240819 14:32:56.743" level="INFO">criteria is com.lionparcel.services.consumer:id/rvRouteSearchResult</msg>
+<status status="PASS" starttime="20240819 14:32:56.678" endtime="20240819 14:32:56.743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${row_result_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:56.794" level="INFO">criteria is com.lionparcel.services.consumer:id/clCategoryPackageRow</msg>
+<status status="PASS" starttime="20240819 14:32:56.743" endtime="20240819 14:32:56.794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${district_name_text_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:56.851" level="INFO">criteria is com.lionparcel.services.consumer:id/txtDistrictRouteName</msg>
+<status status="PASS" starttime="20240819 14:32:56.794" endtime="20240819 14:32:56.851"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${city_name_text_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:56.918" level="INFO">criteria is com.lionparcel.services.consumer:id/txtCityRouteName</msg>
+<status status="PASS" starttime="20240819 14:32:56.851" endtime="20240819 14:32:56.918"/>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
-<var>${err_msg_text}</var>
-<arg>id=${err_msg_text_xpath_id}</arg>
+<var>${district_name_text}</var>
+<arg>id=${district_name_text_xpath_id}</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20240818 23:51:09.088" level="INFO">Element 'id=com.lionparcel.services.consumer:id/txtErrorMessage' text is 'Minimal 3 karakter' </msg>
-<msg timestamp="20240818 23:51:09.088" level="INFO">criteria is com.lionparcel.services.consumer:id/txtErrorMessage</msg>
-<msg timestamp="20240818 23:51:09.088" level="INFO">${err_msg_text} = Minimal 3 karakter</msg>
-<status status="PASS" starttime="20240818 23:51:09.022" endtime="20240818 23:51:09.088"/>
+<msg timestamp="20240819 14:32:56.989" level="INFO">Element 'id=com.lionparcel.services.consumer:id/txtDistrictRouteName' text is 'Sorong Barat' </msg>
+<msg timestamp="20240819 14:32:56.989" level="INFO">criteria is com.lionparcel.services.consumer:id/txtDistrictRouteName</msg>
+<msg timestamp="20240819 14:32:57.003" level="INFO">${district_name_text} = Sorong Barat</msg>
+<status status="PASS" starttime="20240819 14:32:56.918" endtime="20240819 14:32:57.003"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${err_msg_text}</arg>
-<arg>${err_msg_text_should_be}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20240818 23:51:09.088" endtime="20240818 23:51:09.088"/>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${city_name_text}</var>
+<arg>id=${city_name_text_xpath_id}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240819 14:32:57.078" level="INFO">Element 'id=com.lionparcel.services.consumer:id/txtCityRouteName' text is 'Sorong (SOQ)' </msg>
+<msg timestamp="20240819 14:32:57.078" level="INFO">criteria is com.lionparcel.services.consumer:id/txtCityRouteName</msg>
+<msg timestamp="20240819 14:32:57.078" level="INFO">${city_name_text} = Sorong (SOQ)</msg>
+<status status="PASS" starttime="20240819 14:32:57.003" endtime="20240819 14:32:57.078"/>
 </kw>
-<status status="PASS" starttime="20240818 23:51:08.928" endtime="20240818 23:51:09.088"/>
+<kw name="Evaluate" library="BuiltIn">
+<var>${destination_address}</var>
+<arg>'${district_name_text}, ${city_name_text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240819 14:32:57.079" level="INFO">${destination_address} = Sorong Barat, Sorong (SOQ)</msg>
+<status status="PASS" starttime="20240819 14:32:57.078" endtime="20240819 14:32:57.079"/>
 </kw>
-<kw name="When LionParcelSearchLocationPage.User Fill Route Search Field With Wrong SubDisctrict Address" library="LionParcelSearchLocationPage">
-<kw name="Input Text" library="AppiumLibrary">
-<arg>id=${route_edit_xpath_id}</arg>
-<arg>${wrong_destination_text}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20240818 23:51:09.091" level="INFO">Typing text 'zzzzz' into text field 'id=com.lionparcel.services.consumer:id/edtRouteSearch'</msg>
-<msg timestamp="20240818 23:51:09.848" level="INFO">criteria is com.lionparcel.services.consumer:id/edtRouteSearch</msg>
-<status status="PASS" starttime="20240818 23:51:09.089" endtime="20240818 23:51:09.872"/>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_destination_address}</arg>
+<arg>${destination_address}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240819 14:32:57.080" level="INFO">${global_destination_address} = Sorong Barat, Sorong (SOQ)</msg>
+<status status="PASS" starttime="20240819 14:32:57.079" endtime="20240819 14:32:57.080"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=${row_result_xpath_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240819 14:32:57.083" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/clCategoryPackageRow'.</msg>
+<msg timestamp="20240819 14:32:57.199" level="INFO">criteria is com.lionparcel.services.consumer:id/clCategoryPackageRow</msg>
+<status status="PASS" starttime="20240819 14:32:57.080" endtime="20240819 14:32:57.199"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240818 23:51:11.882" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240818 23:51:09.872" endtime="20240818 23:51:11.882"/>
+<msg timestamp="20240819 14:32:59.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240819 14:32:57.200" endtime="20240819 14:32:59.215"/>
 </kw>
-<status status="PASS" starttime="20240818 23:51:09.089" endtime="20240818 23:51:11.882"/>
+<status status="PASS" starttime="20240819 14:32:53.541" endtime="20240819 14:32:59.215"/>
 </kw>
-<kw name="Then LionParcelSearchLocationPage.Warning Of Location Not Found Will Be Appear" library="LionParcelSearchLocationPage">
+<kw name="Then LionParcelCheckRatePage.Check Rate Page Element Will Be Appear And Destination Address Will Be Filled With Choosen Sub District Address" library="LionParcelCheckRatePage">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=${location_not_found_text_xpath}</arg>
+<arg>xpath=${check_rate_title_xpath}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:12.029" level="INFO">xpath criteria: //android.widget.TextView[@text="Lokasi tidak ditemukan"]</msg>
-<status status="PASS" starttime="20240818 23:51:11.883" endtime="20240818 23:51:12.030"/>
+<msg timestamp="20240819 14:32:59.370" level="INFO">xpath criteria: //android.widget.TextView[@text="Cek Tarif untuk Pengirimanmu"]</msg>
+<status status="PASS" starttime="20240819 14:32:59.216" endtime="20240819 14:32:59.370"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=${location_not_reg_text_xpath}</arg>
+<arg>id=${origin_address_xpath_id}</arg>
 <arg>${time_out_element_visible}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20240818 23:51:12.157" level="INFO">xpath criteria: //android.widget.TextView[@text="Lokasi yang kamu masukkan tidak ada dalam daftar"]</msg>
-<status status="PASS" starttime="20240818 23:51:12.030" endtime="20240818 23:51:12.157"/>
+<msg timestamp="20240819 14:32:59.497" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
+<status status="PASS" starttime="20240819 14:32:59.370" endtime="20240819 14:32:59.497"/>
 </kw>
-<status status="PASS" starttime="20240818 23:51:11.883" endtime="20240818 23:51:12.157"/>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${destination_address_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:59.578" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
+<status status="PASS" starttime="20240819 14:32:59.497" endtime="20240819 14:32:59.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=${switch_button_xpath}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:59.700" level="INFO">xpath criteria: (//android.widget.ImageView[@content-desc="Ini merupakan sebuah gambar"])[3]</msg>
+<status status="PASS" starttime="20240819 14:32:59.578" endtime="20240819 14:32:59.700"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${check_rate_button_xpath}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:32:59.782" level="INFO">criteria is com.lionparcel.services.consumer:id/btnCheckTariff</msg>
+<status status="PASS" starttime="20240819 14:32:59.700" endtime="20240819 14:32:59.782"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${origin_address_text}</var>
+<arg>id=${origin_address_xpath_id}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240819 14:32:59.870" level="INFO">Element 'id=com.lionparcel.services.consumer:id/edtOriginAddress' text is 'Panongan, Tangerang (TNG)' </msg>
+<msg timestamp="20240819 14:32:59.870" level="INFO">criteria is com.lionparcel.services.consumer:id/edtOriginAddress</msg>
+<msg timestamp="20240819 14:32:59.870" level="INFO">${origin_address_text} = Panongan, Tangerang (TNG)</msg>
+<status status="PASS" starttime="20240819 14:32:59.782" endtime="20240819 14:32:59.870"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${origin_address_text}</arg>
+<arg>${global_origin_address_text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240819 14:32:59.870" endtime="20240819 14:32:59.871"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${destination_address_text}</var>
+<arg>id=${destination_address_xpath_id}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240819 14:32:59.961" level="INFO">Element 'id=com.lionparcel.services.consumer:id/edtDestinationAddress' text is 'Sorong Barat, Sorong (SOQ)' </msg>
+<msg timestamp="20240819 14:32:59.961" level="INFO">criteria is com.lionparcel.services.consumer:id/edtDestinationAddress</msg>
+<msg timestamp="20240819 14:32:59.961" level="INFO">${destination_address_text} = Sorong Barat, Sorong (SOQ)</msg>
+<status status="PASS" starttime="20240819 14:32:59.871" endtime="20240819 14:32:59.961"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${destination_address_text}</arg>
+<arg>${global_destination_address}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240819 14:32:59.961" endtime="20240819 14:32:59.961"/>
+</kw>
+<status status="PASS" starttime="20240819 14:32:59.216" endtime="20240819 14:32:59.961"/>
+</kw>
+<kw name="When LionParcelCheckRatePage.User Click Check Rate Button" library="LionParcelCheckRatePage">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=${check_rate_button_xpath}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240819 14:32:59.963" level="INFO">Clicking element 'id=com.lionparcel.services.consumer:id/btnCheckTariff'.</msg>
+<msg timestamp="20240819 14:33:00.787" level="INFO">criteria is com.lionparcel.services.consumer:id/btnCheckTariff</msg>
+<status status="PASS" starttime="20240819 14:32:59.962" endtime="20240819 14:33:00.787"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240819 14:33:03.796" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240819 14:33:00.788" endtime="20240819 14:33:03.796"/>
+</kw>
+<status status="PASS" starttime="20240819 14:32:59.962" endtime="20240819 14:33:03.796"/>
+</kw>
+<kw name="Then LionParcelCheckRatePage.Default Weight And List Service With Rate Will Be Appear" library="LionParcelCheckRatePage">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${total_weight_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:04.422" level="INFO">criteria is com.lionparcel.services.consumer:id/edtTotalWeight</msg>
+<status status="PASS" starttime="20240819 14:33:03.820" endtime="20240819 14:33:04.422"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${total_weight_text}</var>
+<arg>id=${total_weight_xpath_id}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240819 14:33:04.524" level="INFO">Element 'id=com.lionparcel.services.consumer:id/edtTotalWeight' text is '1' </msg>
+<msg timestamp="20240819 14:33:04.524" level="INFO">criteria is com.lionparcel.services.consumer:id/edtTotalWeight</msg>
+<msg timestamp="20240819 14:33:04.525" level="INFO">${total_weight_text} = 1</msg>
+<status status="PASS" starttime="20240819 14:33:04.422" endtime="20240819 14:33:04.525"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${total_weight_text}</arg>
+<arg>${default_total_weight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240819 14:33:04.525" endtime="20240819 14:33:04.525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${add_ddtl_button_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:04.603" level="INFO">criteria is com.lionparcel.services.consumer:id/btnAddDetail</msg>
+<status status="PASS" starttime="20240819 14:33:04.525" endtime="20240819 14:33:04.603"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${product_rate_layout_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:04.691" level="INFO">criteria is com.lionparcel.services.consumer:id/layoutTariffProductCard</msg>
+<status status="PASS" starttime="20240819 14:33:04.603" endtime="20240819 14:33:04.691"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${product_type_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:04.770" level="INFO">criteria is com.lionparcel.services.consumer:id/rvProductType</msg>
+<status status="PASS" starttime="20240819 14:33:04.691" endtime="20240819 14:33:04.771"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${1056}</arg>
+<arg>${2186}</arg>
+<arg>${1042}</arg>
+<arg>${268}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240819 14:33:04.771" endtime="20240819 14:33:06.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240819 14:33:08.106" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240819 14:33:06.091" endtime="20240819 14:33:08.106"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${total_rate_est_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:08.239" level="INFO">criteria is com.lionparcel.services.consumer:id/txtTotalTariffEstimation</msg>
+<status status="PASS" starttime="20240819 14:33:08.106" endtime="20240819 14:33:08.239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${pick_up_button_xpath_id}</arg>
+<arg>${time_out_element_visible}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240819 14:33:08.356" level="INFO">criteria is com.lionparcel.services.consumer:id/buttonPickUp</msg>
+<status status="PASS" starttime="20240819 14:33:08.239" endtime="20240819 14:33:08.356"/>
+</kw>
+<status status="PASS" starttime="20240819 14:33:03.820" endtime="20240819 14:33:08.357"/>
 </kw>
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20240818 23:51:12.158" endtime="20240818 23:51:12.562"/>
+<status status="PASS" starttime="20240819 14:33:08.357" endtime="20240819 14:33:08.794"/>
 </kw>
-<status status="PASS" starttime="20240818 23:48:41.058" endtime="20240818 23:51:12.563"/>
+<status status="PASS" starttime="20240819 14:30:27.569" endtime="20240819 14:33:08.795"/>
 </test>
-<doc>This is For Assignment 2 Create an Automated Test for the user journey of shopping cart checkout</doc>
-<status status="PASS" starttime="20240818 23:48:40.879" endtime="20240818 23:51:12.564"/>
+<doc>This is For Assignment 4 Positive Test Of Check Rate Menu</doc>
+<status status="PASS" starttime="20240819 14:30:27.374" endtime="20240819 14:33:08.796"/>
 </suite>
 <statistics>
 <total>
@@ -544,7 +717,7 @@ criteria is com.lionparcel.services.consumer:id/txtTittle</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="MobileLionParcelCheckRateNegative">MobileLionParcelCheckRateNegative</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MobileLionParcelCheckRatePositive2">MobileLionParcelCheckRatePositive2</stat>
 </suite>
 </statistics>
 <errors>

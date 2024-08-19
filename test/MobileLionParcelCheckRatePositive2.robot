@@ -5,9 +5,11 @@ Resource    ../PageObject/LionParcelHomePage.robot
 Resource    ../PageObject/LionParcelCheckRatePage.robot
 Resource    ../PageObject/LionParcelSearchLocationPage.robot
 
+*** Variables ***
+${destination_outside_java}     Sorong Barat
 
 *** Test Cases ***
-Scenario : Open Lion Parcel Android App And Check Rate With Destination SubDistrict Same With Origin SubDisctrict
+Scenario : Open Lion Parcel Android App And Check Rate With Destination SubDistrict Outside Java
     Given LionParcelLoginPage.User Open Lion Parcel App Home Page
     Then LionParcelLoginPage.User Will Be Redirected To Login Page And Pop Up Privacy Policy Appear
     When LionParcelLoginPage.User Click Agree Button in Privacy Policy Pop Up
@@ -24,7 +26,7 @@ Scenario : Open Lion Parcel Android App And Check Rate With Destination SubDistr
     Then LionParcelCheckRatePage.Permission Pop Up Will Be Disappear And Check Rate Page Element Will Be Appear
     When LionParcelCheckRatePage.User Click Destination Address Field
     Then LionParcelSearchLocationPage.Search Location Page Will Be Appear
-    When LionParcelSearchLocationPage.User Fill Route Search Field Same With Origin Address And Click Search Result
+    When LionParcelSearchLocationPage.User Fill Route Search Field Same With    ${destination_outside_java}
     Then LionParcelCheckRatePage.Check Rate Page Element Will Be Appear And Destination Address Will Be Filled With Choosen Sub District Address
     When LionParcelCheckRatePage.User Click Check Rate Button
     Then LionParcelCheckRatePage.Default Weight And List Service With Rate Will Be Appear
