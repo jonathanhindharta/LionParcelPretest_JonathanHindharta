@@ -14,5 +14,6 @@ To running Assignment 3 use this command : python EvenOddSorting.py
 To running Assignment 4 use this command : robot test/MobileLionParcelCheckRatePositive.robot or robot test/MobileLionParcelCheckRatePositive2.robot or robot test/MobileLionParcelCheckRatePositive.robot
 
 - To Running all Test Suites API and UI in test folder, use this command : robot test/
-- Notes before running Mobile UI Test, make sure appium server is already running, or run it first using command : appium --allow-cors
-- Notes before running Mobile UI Test, make sure Lion Parcel Android App already installed in your android device (https://play.google.com/store/apps/details?id=com.lionparcel.services.consumer&hl=id)
+- Notes : before running Mobile UI Test, make sure appium server is already running, or run it first using command : appium --allow-cors
+- Notes : before running Mobile UI Test, make sure Lion Parcel Android App already installed in your android device (https://play.google.com/store/apps/details?id=com.lionparcel.services.consumer&hl=id)
+- Notes : for running in Android set ${device_name} and ${platform_version} variable in file LionParcelLoginPage.robot to become our Android device/emulator name and version
